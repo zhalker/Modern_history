@@ -36,7 +36,7 @@ window.MD_history.prototype.pushState = function(state, url) {
 window.MD_history.prototype.replaceState = function(state, url) {
   this.old = window.location.href
   this.new = url
-  window.history.replaceState(state, "". url)
+  window.history.replaceState(state, "", url)
   for(const identifier in this.groupsCallback) {
     this.groupsCallback[identifier](this.old, this.new)
   }
